@@ -1,0 +1,66 @@
+
+title=Example.
+
+  # Create Room 1 and Room 2, and link them together.
+  # Room 1 is the first room ever listed, so player starts there.
+door=Room 1,Room 2
+
+  # Create Bob and place him in Room 1.
+  # Have him say "Hello World!", "How are you?" when talked to (without quotes)
+  # These quotes let you type anything you want. Below is another example.
+person=Bob,Room 1
+"Hello World!"
+"How are you?"
+
+!Bob
+Hello World!
+How are you?
+  # Also valid, but can't use # or = in dialogue without quotes.
+
+  # Create an item called 'Fish' and give it directly to the player.
+  # Make the fish 'edible' with an ampersand (&)
+item=&Fish,player
+
+  # Create a heavy stove the player can't pick up with an exclamation mark (!).
+item=!Stove,Room 2
+
+  # Create a normal basic item, but put it in the same room as the player
+item=Leaf,here
+
+  # Searches same directory as previously listed.
+include=filename
+  #Example:
+  #include=folder1/file1
+  #include=file2
+  # Actually loads folder1/file2
+  # To remove folder name, use:
+  # include=./file2
+
+  # Make a spooky message at beginning when player enters Room 1
+trigger=Room 1
+$ person say Turn back!
+
+  # Do the same thing in Room 2, using a procedure (proc).
+proc=spooky_text
+$ person say Turn back!
+
+trigger=Room 2
+$ @spooky_text
+
+  # Reset Bob's dialogue and trigger, then set new ones
+!Bob
+$ item add &Fish:here
+"Here, have a fish."
+
+  # What will happen:
+  # Room 1 and Room 2 are created, connected, and Room 1 has Bob.
+  # Bob will NOT say Hello World because it's overwritten with "Here, have a fish."
+  # Both rooms say "Turn back!" when you enter them.
+  # Bob "gives you" (drops on the floor) an edible fish each time you talk to him.
+  # If there's no file named "filename" then the game says it can't find the file.
+
+  # Bob could've instead done "item add &Fish:player" to put it in the player's inventory.
+
+
+
+

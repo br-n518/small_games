@@ -1,0 +1,12 @@
+
+!Billy
+"Muah ha ha! Now what will you do? My ritual is nearly complete."
+"Or did you not even notice the summoning circle by your feet?"
+"Once I've completed-"
+$ !load file phase5.txt
+$ !person move Arbor,Backyard
+
+
+!Arbor
+"Oh dear..."
+

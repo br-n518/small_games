@@ -1,0 +1,69 @@
+
+# All rooms:
+
+# Front room
+item=!Plant,Front room
+$ person say Better not.
+
+# Main hall
+item=!Grand table,Main hall
+
+# Front yard
+item=!Garden Gnome,Front yard
+item=!Garden Gnome,Front yard
+
+# West yard
+item=!Chestnut tree,West yard
+$ item add &Chestnut,player
+$ person say You get a Chestnut.
+item=Book,West yard
+$ person say "The Art of Persuasion"
+
+# East yard
+item=!Acorn tree,East yard
+$ item add &Acorn,player
+$ person say You get an Acorn.
+
+# Backyard
+item=!BBQ,Backyard
+
+# Kitchen
+item=&Fish,Kitchen
+item=&Pasta,Kitchen
+
+# Balconies
+item=!Bust of Arbor,Balconies
+item=!Bust of Billy,Balconies
+
+# West/East hall
+# West/East tower stairs
+# Classroom A-H
+
+
+
+# West hall plaque
+item=!Plaque,West hall
+$ person say West Hall
+# East hall plaque
+item=!Plaque,East hall
+$ person say East Hall
+item=!Blackboard,Classroom A
+$ person say The board is blank.
+item=!Blackboard,Classroom B
+$ person say The board is blank.
+item=!Blackboard,Classroom C
+$ person say The board is blank.
+item=!Blackboard,Classroom D
+$ person say The board is blank.
+item=!Blackboard,Classroom E
+$ person say The board is blank.
+item=!Blackboard,Classroom F
+$ person say The board is blank.
+item=!Blackboard,Classroom G
+$ person say The board is blank.
+item=!Blackboard,Classroom H
+$ person say The board is blank.
+
+
+
+

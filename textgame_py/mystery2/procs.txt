@@ -1,0 +1,29 @@
+
+
+
+
+proc=phase1
+$ person dialogue Billy,Meet me in the kitchen?\nI wonder what it means.\nUmm... you did check the Kitchen, didn't you?
+$ person ask Billy,kitchen,Better check it out!
+
+$ person dialogue Arbor,How is the investigation coming along?
+
+$ person dialogue Corey,Huh? Who are you?\nOh, an investigator...\nWell I'm full, I should be going now.
+$ person trigger Corey,item add Clue1,here*item trigger Clue1,@clue1
+
+proc=clue1
+$ person say Looks like a note, too blood-stained to be read.
+$ !person move Corey,East tower stairs
+$ @phase2
+
+
+proc=phase2
+$ person dialogue Billy,Corey? That can't be right!\nYou're sure? Hmm...
+$ person dialogue Arbor,How goes the investigation?
+
+$ person dialogue Corey,AH! How did you find me?!\nNo matter! You won't find me again!
+$ person trigger Corey,!person move Corey,Classroom B*!@phase3
+
+proc=phase3
+$ person say Ending procs
+$ load file phase3.txt

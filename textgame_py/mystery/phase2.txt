@@ -1,0 +1,18 @@
+
+# Corey is in the East tower stairs, trying to hide
+# Billy and Arbor are surprised.
+
+
+!Billy
+"Corey? That can't be right!"
+"You're sure? Hmm..."
+
+!Arbor
+"How goes the investigation?"
+
+!Corey
+"AH! How did you find me?!"
+"No matter! You won't find me again!"
+$ !person move Corey,Classroom B
+$ !load file phase3.txt
+

@@ -1,0 +1,14 @@
+
+# Corey is hiding in classroom B, his apparent home base
+
+!Corey
+"That's it! How did you find this place?"
+"Huh? Billy? Wait, that can't be right."
+"If Billy knew, then... Oh no!"
+"*Corey disappears in a flash of light*"
+"*There is a loud whirling sound coming from the Backyard*"
+$ !person move Corey,null
+$ !item add !Summoning Circle,Backyard
+$ !person move Billy,Backyard
+$ !load file phase4.txt
+

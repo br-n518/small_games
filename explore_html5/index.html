@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Explore Game</title>
+
+<style>
+/* For the "which-difficulty" buttons */
+input{width:40%;height:40px}
+</style>
+
+<script src="gamemain.js"></script>
+<script>
+
+// get the canvas to draw to and pass it to game_start function, and set other "document" settings
+// we're accessing "document" here for better cross-browser compatibility
+function init_doc(diff) {
+	console.log("Difficulty: " + diff);
+	// load the canvas so the game may begin
+	load_game_canvas();
+	var s = game_start( document.getElementById("game_canvas"), diff );
+	if (s) {
+		document.addEventListener( 'keydown', keyPressed );
+		document.addEventListener( 'keyup' , keyReleased );
+		console.log("Key listeners added.");
+	}
+}
+
+function load_difficulty_chooser() {
+	var gamearea = document.getElementById("game_area");
+	gamearea.innerHTML = 'Difficulty:<br /><br /><input type="button" value="Easy" onclick="init_doc(0)" /><br /><br /><input type="button" value="Normal" onclick="init_doc(1)" /><br /><br /><input type="button" value="Hard" onclick="init_doc(2)" /><br /> ';
+}
+
+function load_game_canvas() {
+	var gamearea = document.getElementById("game_area");
+	gamearea.innerHTML = '<canvas id="game_canvas" width="400" height="400" style="background-color:white;"></canvas>';
+}
+
+</script>
+</head>
+
+<body onload="load_difficulty_chooser()" style="color:white; background-color:black; text-align:center; font-size:20px;">
+	<h1>Explore Game</h1>
+	<hr />
+	<br />
+	<div id="game_area"></div>
+	<br />
+	<hr />
+	<br />
+	Goal: Collect all blue Mana Orbs.<br />
+	A new enemy spawns once every second.<br />
+	You get 5 health and 10 mana when you die, and all nearby enemies are moved away.<br />
+	Game difficulty affects how many enemies start and how quickly new enemies spawn.<br />
+	You can absorb ground blocks for mana, or carry a single block without absorbing it.<br />
+	<!-- Controls Display -->
+	<p style="font-weight:bold">Controls:</p>
+	[ ESC, Backspace, P ]<br />Pause/Unpause.<br /><br />
+	[ Arrows, WASD ]<br />Move.<br /><br />
+	[ Space, Numpad0 ]<br />Grab/Drop ground block.<br /><br />
+	[ NUMPAD 1-9, (Shift)+ Move buttons ]<br />Shoot&nbsp;&nbsp;(<span style="color:#22CCFF">-1 mana</span>).<br /><br />
+	[ C, Numpad+ ]<br />Break ground block for mana&nbsp;&nbsp;(<span style="color:#22CCFF">+1 mana</span>).<br /><br />
+	[ E ]<br />Create ground block&nbsp;&nbsp;(<span style="color:#22CCFF">-1 mana</span>).<br /><br />
+	[ Q ]<br />Heal&nbsp;&nbsp;(<span style="color:#FF2020">+2 health</span>, <span style="color:#22CCFF">-3 mana</span>).<br /><br />
+	[ G ]<br />Create extra life&nbsp;&nbsp;(<span style="color:#22CCFF">-50 mana</span>).<br /><br />
+	[ F2 ]<br />Break life&nbsp;&nbsp;(<span style="color:#FF2020">+5 health</span>, <span style="color:#22CCFF">+25 mana</span>, <span style="color:#DDFF20">-1 life</span>, available while paused).<br /><br />
+	<hr />
+</body>
+
+</html>

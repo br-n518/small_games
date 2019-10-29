@@ -1,0 +1,96 @@
+
+title=You awaken in what looks like the entrance of some kind of dungeon.
+
+door=Entrance,Main Corridor
+
+door=Chamber 1,Chamber 1
+door=Chamber 2,Chamber 2
+door=Chamber 3,Chamber 3
+door=Chamber 4,Chamber 4
+door=Final Chamber,Final Chamber
+
+door=Finish,Finish
+
+
+proc=door1
+$ place door Main Corridor,Chamber 1
+$ !person say You hear a door open.
+proc=door2
+$ place door Main Corridor,Chamber 2
+$ !person say You hear a door open.
+proc=door3
+$ place door Main Corridor,Chamber 3
+$ !person say You hear a door open.
+proc=door4
+$ place door Main Corridor,Chamber 4
+$ !person say You hear a door open.
+proc=door5
+$ place door Main Corridor,Final Chamber
+$ !person say You hear a door open.
+proc=finish
+$ place door Final Chamber,Finish
+$ place door Main Corridor,Finish
+$ !person say You hear a door open.
+
+# Entrance
+item=!Button,Entrance
+$ @door1
+
+# Main Corridor
+
+# Chamber 1
+person=Marty,Chamber 1
+" Hello. Your first challenge is easy.
+" Speak to me!
+" Oh, you've done it. Ok.
+$ @door2
+$ !person dialogue Marty,Congratulations.
+
+
+
+# Chamber 2
+item=!Button,Chamber 2
+$ ?(Want to open the next door?) @door3
+
+
+# Chamber 3
+item=!Plaque,Chamber 3
+$ person say You must check the entrance again.
+$ !item add !Button2,Entrance
+$ !item trigger Button2,@door4
+
+
+# Chamber 4
+item=!One,Chamber 4
+$ !item add &Fish,Chamber 4
+$ item add &Fish,Main Corridor
+$ !item add !Two,Main Corridor
+$ !item trigger Two,@two
+$ person say You hear a panel shift.
+
+proc=two
+$ !item add !Three,Entrance
+$ !item trigger Three,@door5
+$ !person say You hear a panel shift.
+
+
+# Final Chamber
+person=Voodoo,Final Chamber
+" So you've made it this far.
+" But your adventure comes to an end here.
+$ person move player,Entrance
+$ !item add !FINAL BUTTON,Final Chamber
+$ !item trigger FINAL BUTTON,@finish
+
+
+# Finish
+trigger=Finish
+$ person say Game Over.
+$ person move player,Party Room
+
+door=Party Room,Party Room
+item=Party Hat,Party Room
+item=&Party Cake,Party Room
+item=Whistle,Party Room
+$ person move player,Entrance
+

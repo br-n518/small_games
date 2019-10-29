@@ -1,0 +1,68 @@
+
+# All rooms:
+
+# Main hall
+item=!Plant,Main hall
+$ person say Better not.
+item=!Grand table,Main hall
+
+# Front yard
+item=!Garden Gnome,Front yard
+item=!Garden Gnome,Front yard
+
+# West yard
+item=!Chestnut tree,West yard
+$ item add &Chestnut,player
+$ person say You get a Chestnut.
+item=Book,West yard
+$ person say "The Art of Persuasion"
+
+# East yard
+item=!Acorn tree,East yard
+$ item add &Acorn,player
+$ person say You get an Acorn.
+
+# Backyard
+item=!BBQ,Backyard
+
+# Kitchen
+item=&Fish,Kitchen
+item=&Pasta,Kitchen
+
+# Balconies
+item=!Bust of Arbor,Balconies
+item=!Bust of Billy,Balconies
+
+# West/East hall
+# West/East tower stairs
+# Classroom A-H
+
+
+
+# West hall plaque
+item=!Plaque,West hall
+$ person say West Hall
+# East hall plaque
+item=!Plaque,East hall
+$ person say East Hall
+item=!Blackboard:A,Classroom A
+$ person say The board is blank. (B is changed)
+$ item trigger Blackboard:B,person say Hello World!
+item=!Blackboard:B,Classroom B
+$ person say The board is blank.
+item=!Blackboard:C,Classroom C
+$ person say The board is blank.
+item=!Blackboard:D,Classroom D
+$ person say The board is blank.
+item=!Blackboard:E,Classroom E
+$ person say The board is blank.
+item=!Blackboard:F,Classroom F
+$ person say The board is blank.
+item=!Blackboard:G,Classroom G
+$ person say The board is blank.
+item=!Blackboard:H,Classroom H
+$ person say The board is blank.
+
+
+
+

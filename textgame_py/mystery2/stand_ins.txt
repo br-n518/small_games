@@ -1,0 +1,77 @@
+
+# Front room
+
+# Main hall
+
+# Front yard
+person=Richard,Front yard
+"Hello. I'm the groundskeeper here."
+"I watch over the magical plants here."
+"I don't know anything about this investigation of yours,"
+"so I can't help you here."
+? alice,Alice helps me with the magical plants here.
+? plant plants,There are plenty of magical plants all around us here.
+? billy,Billy is arch duke or something another here.
+? corey,Corey! Blast his soul! He stepped on my Snapcorn the other day, here!
+? arbor,Arbor is a good friend to me here.
+? snapcorn,My poor snapcorn. ):
+? here,Here?
+? maegi,Maegi is a good friend of mine.
+
+# West yard
+person=Alice,West yard
+"Don't you love the smell of chestnuts?"
+"Hmm? Magical plants? Yes..."
+"Yes, there must be some around here. Somewhere..."
+? arbor,Arbor is the headmaster. He spends a lot of time in his office.
+? office,The headmasters office is at the top of the towers, by the balconies.
+? billy,Billy is the headmaster's right-hand man.
+? corey,Corey is new here. I'm not sure what I think of him.
+? richard,Richard is our gentle giant. He'd never hurt a fly.
+? maegi,Who? Never heard of them.
+? plant plants,Yes, there must be some around here. Somewhere...
+
+
+
+# Balconies
+person=Dobbs,Balconies
+"Are you afraid of heights?"
+"I am."
+"That's why I'm up here... For now."
+? arbor,Arbor is in his office, right over there.
+? billy,Billy has been the second-in-command for a while now.
+? alice,Alice prefers reading beneath a tree.
+? richard,Richard is our excellent groundskeeper.
+? bust busts,These busts are a bit gaudy, eh?
+? maegi,Who? Never heard of them.
+
+# West/East hall
+person=Maegi,West hall
+? corey,Corey? He frequents the East tower stairs.
+? alice,Alice is usually under the Chestnut tree in the West yard.
+? arbor,Arbor can be found in his office up the stairs here.
+? billy,Who knows where Billy might be.
+? richard,Richard is somewhere outside, tending to the grounds.
+? marla,Probably arguing with Tom.
+? tom,Probably arguing with Marla.
+? fred,Fred is in a classroom reading quietly.
+? dobbs,Dobbs is likely trying to cure his fear of heights on the Balconies.
+? maegi,Who? Never heard of them. That's likely what they say of me.
+
+# West/East tower stairs
+# Classroom A-H
+
+person=Marla,Classroom D
+"I think a Snapcorn is a better match."
+? snapcorn,Best plant ever! A Snapcorn can rapidly regrow and throw parts of itself!
+? corklebob,Mediocre. A tiny Corklebob will never be a match for a Snapcorn!
+person=Tom,Classroom D
+"No, it has got to be a Corklebob!"
+? corklebob,A small floating animated plant. Not very common around here.
+? snapcorn,A stringy yellow plant with bulbous leaves. Common to these parts.
+
+person=Fred,Classroom G
+"Not now, I'm reading."
+? reading,Not now, I'm reading an opera.
+
+

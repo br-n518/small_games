@@ -1,0 +1,25 @@
+
+!Billy
+"Meet me in the kitchen?"
+"I wonder what it means."
+"Umm... you did check the kitchen, didn't you?"
+? kitchen,Better check it out!
+
+!Arbor
+"How is the investigation coming along?"
+
+!Corey
+"Huh? Who are you?"
+"Oh, an investigator..."
+"Well I'm full, I should be going now."
+$ item add Clue1,here
+$ item trigger Clue1,@clue1
+
+#Upon leaving they drop another clue.
+#Prompting you to ask Billy about the kitchen.
+
+proc=clue1
+$ person say Looks like a note, too blood-stained to be read.
+$ !person move Corey,East tower stairs
+$ !load file phase2.txt
+

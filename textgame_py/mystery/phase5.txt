@@ -1,0 +1,11 @@
+
+
+!Billy
+
+!Arbor
+"I've put an immobilizing spell on our friend Billy."
+"Thank you for helping us solve the mystery."
+"And please, excuse my undercover friend, Corey."
+$ person move Corey,Backyard
+$ person dialogue Corey,Great work!\nHmm? What you did? Don't mind that now\ncome celebrate with us!\n(Game Over)
+

@@ -1,0 +1,83 @@
+
+title=You arrive at the gate of a school you've been called to.
+
+door=School gate,School gate
+
+#Arbor explains there's some mystery.
+#Redirects you to Billy
+
+person=Arbor,School gate
+$ !place door School gate,Front yard
+$ !person dialogue Arbor,Hello again.\nI hope the investigation is making progress.
+$ !person move Arbor,Headmaster office
+" Hello, my name is Arbor.
+" I'm the headmaster of this school.
+" Thank you for coming. We have a mystery that needs to be solved.
+" You can get started with Billy in the Main hall.
+
+# plaque for school gate
+item=!Plaque,School gate
+$ person say Welcome to Hagworts.
+
+
+
+# Main school
+door=Front room,Main hall
+door=Front room,Front yard
+
+door=Front yard,Main hall
+door=Front yard,West yard
+door=Front yard,East yard
+door=West yard,Backyard
+door=East yard,Backyard
+door=Kitchen,Backyard
+door=Kitchen,West hall
+door=Kitchen,East hall
+door=Main hall,West hall
+door=Main hall,East hall
+door=West tower stairs,West hall
+door=East tower stairs,East hall
+door=Balconies,West tower stairs
+door=Balconies,East tower stairs
+door=West hall,Classroom A
+door=West hall,Classroom B
+door=West hall,Classroom C
+door=West hall,Classroom D
+door=East hall,Classroom E
+door=East hall,Classroom F
+door=East hall,Classroom G
+door=East hall,Classroom H
+
+door=Balconies,Headmaster office
+
+include=decor.txt
+include=stand_ins.txt
+
+door=null,null
+
+
+
+person=Billy,Main hall
+$ !person dialogue Billy,Did you check Classroom B yet?
+Hello, headmaster Arbor told me you were coming.
+I believe our first clue is in Classroom B in the West hall.
+? kitchen,Yes, please help yourself to the kitchen.
+
+item=!Desk,Classroom B
+$ item add Suspicious Paper,player
+$ item trigger Suspicious Paper,@paper
+$ person say A piece of paper drops out of the desk.
+
+proc=paper
+$ person say Meet me in the kitchen.
+#$ !load file phase1.txt
+$ @phase1
+
+person=Corey,Kitchen
+"What do you want?"
+
+
+include=procs.txt
+
+
+
